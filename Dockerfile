@@ -33,5 +33,8 @@ EXPOSE 1883 9001
 
 ADD docker-entrypoint.sh /usr/bin/
 
+RUN chmod 777 /usr/bin/docker-entrypoint.sh \
+    && ln -s /usr/bin/docker-entrypoint.sh /
+
 ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["/usr/local/sbin/mosquitto", "-c", "/mqtt/config/mosquitto.conf"]
