@@ -16,4 +16,4 @@ MOSQUITTO_SRC = /tmp/mosquitto-1.4.9
 # Specify the path the OpenSSL here
 OPENSSLDIR = /usr
 
-CFG_CFLAGS = -DRAW_SALT
+CFG_CFLAGS = -DRAW_SALT -DPWDEBUG
